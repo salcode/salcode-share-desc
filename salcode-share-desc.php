@@ -13,3 +13,5 @@
  * Text Domain:       salcode-share-desc
  * Domain Path:       /languages
  */
+
+namespace salcode\ShareDesc;
