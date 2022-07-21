@@ -1,0 +1,11 @@
+{
+  "name": "salcode-share-desc",
+  "version": "0.1.0",
+  "description": "Allows you to set the Share Description in post meta from Gutenberg block editor.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sal Ferrarello",
+  "license": "Apache-2.0"
+}
