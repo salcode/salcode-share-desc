@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 
 import { TextareaControl } from '@wordpress/components';
+import { __ } from '@wordpress/i18n';
 
 export default function ShareDesc({
   desc,
@@ -8,7 +9,7 @@ export default function ShareDesc({
   return (
     <p>
       <TextareaControl
-        label="Share Description"
+        label={__('Share Description', 'salcode-share-desc')}
         value={desc}
       />
     </p>
