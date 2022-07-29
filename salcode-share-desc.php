@@ -50,3 +50,16 @@ function register_assets() {
 	);
 }
 add_action( 'init', __NAMESPACE__ . '\register_assets' );
+
+/**
+ * Add our JavaScript to the list of files WordPress loads
+ * when the Gutenberg editor is loaded.
+ *
+ * This only loads when the Gutenberg editor is loaded because
+ * this function is being run on the "enqueue_block_editor_assets"
+ * PHP action.
+ */
+function enqueue_editor_assets() {
+	wp_enqueue_script( 'salcode-share-desc' );
+}
+add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\enqueue_editor_assets' );
