@@ -11,7 +11,9 @@ registerPlugin(
         <PluginDocumentSettingPanel
           title={__('Social Share', 'salcode-share-desc')}
         >
-          <ShareDesc />
+          <ShareDesc
+            desc="This is my stub description, ultimately this value will come from post meta."
+          />
         </PluginDocumentSettingPanel>
       );
     },

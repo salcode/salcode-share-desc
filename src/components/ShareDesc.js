@@ -1,7 +1,9 @@
-export default function ShareDesc() {
+export default function ShareDesc({
+  desc,
+}) {
   return (
     <p>
-      My placeholder description in ShareDesc component
+      {desc}
     </p>
   );
 }
