@@ -5,12 +5,14 @@ import { __ } from '@wordpress/i18n';
 
 export default function ShareDesc({
   desc,
+  setShareDescription,
 }) {
   return (
     <p>
       <TextareaControl
         help={__('This description will be added as a meta tag on the front-end rendering of the page', 'salcode-share-desc')}
         label={__('Share Description', 'salcode-share-desc')}
+        onChange={setShareDescription}
         value={desc}
       />
     </p>
