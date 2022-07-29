@@ -1,8 +1,22 @@
 import { registerPlugin } from '@wordpress/plugins';
-import { useSelect } from '@wordpress/data';
+import {
+  dispatch,
+  useSelect,
+} from '@wordpress/data';
 import { PluginDocumentSettingPanel } from '@wordpress/edit-post';
 import { __ } from '@wordpress/i18n';
 import ShareDesc from './components/ShareDesc';
+
+const setShareDescription = (newShareDescription) => {
+  dispatch('core/editor')
+    .editPost(
+      {
+        meta: {
+          salcode_share_desc: newShareDescription
+        }
+      }
+    );
+};
 
 registerPlugin(
   'salcode-share-desc', // Unique identifier for our plugin.
