@@ -9,6 +9,7 @@ export default function ShareDesc({
   return (
     <p>
       <TextareaControl
+        help={__('This description will be added as a meta tag on the front-end rendering of the page', 'salcode-share-desc')}
         label={__('Share Description', 'salcode-share-desc')}
         value={desc}
       />
