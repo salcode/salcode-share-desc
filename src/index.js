@@ -36,6 +36,7 @@ registerPlugin(
         >
           <ShareDesc
             desc={shareDescription}
+            setShareDescription={setShareDescription}
           />
         </PluginDocumentSettingPanel>
       );
