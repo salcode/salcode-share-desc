@@ -32,3 +32,21 @@ function salcode_share_desc_register_post_meta() {
         'type'              => 'string',
     ]);
 }
+
+/**
+ * Make WordPress aware of our JavaScript file and tell
+ * WordPress to refer to this JavaScript file by the handle
+ * "salcode-share-desc".
+ */
+function register_assets() {
+	$asset_file = include plugin_dir_path( __FILE__ ) . 'build/index.asset.php';
+
+	wp_register_script(
+		'salcode-share-desc',
+		plugins_url( 'build/index.js', __FILE__ ),
+		$asset_file['dependencies'],
+		$asset_file['version'],
+		true
+	);
+}
+add_action( 'init', __NAMESPACE__ . '\register_assets' );
