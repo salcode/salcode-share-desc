@@ -21,4 +21,5 @@ export default function ShareDesc({
 
 ShareDesc.propTypes = {
   desc: PropTypes.string.isRequired,
+  setShareDescription: PropTypes.func.isRequired,
 };
