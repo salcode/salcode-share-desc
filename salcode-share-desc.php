@@ -63,3 +63,20 @@ function enqueue_editor_assets() {
 	wp_enqueue_script( 'salcode-share-desc' );
 }
 add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\enqueue_editor_assets' );
+
+/**
+ * Output the og:description tag on the front-end.
+ */
+function output_og_description() {
+	printf(
+		"<meta property=\"og:description\" content=\"%s\" />\n",
+		esc_attr(
+			get_post_meta(
+				get_the_ID(),
+				'salcode_share_desc',
+				true
+			)
+		),
+	);
+}
+add_action( 'wp_head', __NAMESPACE__ . '\output_og_description' );
