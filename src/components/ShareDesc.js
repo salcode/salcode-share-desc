@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 export default function ShareDesc({
   desc,
 }) {
@@ -7,3 +9,7 @@ export default function ShareDesc({
     </p>
   );
 }
+
+ShareDesc.propTypes = {
+  desc: PropTypes.string.isRequired,
+};
