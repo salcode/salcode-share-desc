@@ -6,7 +6,9 @@ registerPlugin(
   {
     render: () => {
       return (
-        <PluginDocumentSettingPanel>
+        <PluginDocumentSettingPanel
+          title={'Social Share'}
+        >
           <p>Placeholder for future input field for share description</p>
         </PluginDocumentSettingPanel>
       );
