@@ -8,6 +8,7 @@ export default function ShareDesc({
   return (
     <p>
       <TextareaControl
+        label="Share Description"
         value={desc}
       />
     </p>
