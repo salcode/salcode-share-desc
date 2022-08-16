@@ -21,16 +21,16 @@ namespace salcode\ShareDesc;
  */
 add_action( 'init', __NAMESPACE__ . '\salcode_share_desc_register_post_meta' );
 function salcode_share_desc_register_post_meta() {
-    $post_type = ''; // All post types, see register_post_meta() documentation.
-    register_post_meta( $post_type, 'salcode_share_desc', [
-        'auth_callback' => function() {
-            return current_user_can('edit_posts');
-        },
-        'sanitize_callback' => 'sanitize_text_field',
-        'show_in_rest'      => true,
-        'single'            => true,
-        'type'              => 'string',
-    ]);
+	$post_type = ''; // All post types, see register_post_meta() documentation.
+	register_post_meta( $post_type, 'salcode_share_desc', [
+		'auth_callback'     => function() {
+			return current_user_can( 'edit_posts' );
+		},
+		'sanitize_callback' => 'sanitize_text_field',
+		'show_in_rest'      => true,
+		'single'            => true,
+		'type'              => 'string',
+	] );
 }
 
 /**
